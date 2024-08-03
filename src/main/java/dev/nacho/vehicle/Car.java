@@ -11,9 +11,11 @@ public class Car {
     private int maximumSpeed;
     private Color color;
     private int currentSpeed;
+    private boolean automatic;
 
+   
     public Car(String brand, int model, int engine, Fuel typeFuel, CarType carType, int doorsNumber, int seatsNumber,
-            int maximumSpeed, Color color, int currentSpeed) {
+            int maximumSpeed, Color color, int currentSpeed, boolean automatic) {
         this.brand = brand;
         this.model = model;
         this.engine = engine;
@@ -24,6 +26,8 @@ public class Car {
         this.maximumSpeed = maximumSpeed;
         this.color = color;
         this.currentSpeed = currentSpeed;
+        this.automatic = automatic;
+
     }
 
     public String getBrand() {
@@ -106,6 +110,14 @@ public class Car {
         this.currentSpeed = currentSpeed;
     }
 
+    public boolean isAutomatic() {
+        return automatic;
+    }
+
+    public void setAutomatic(boolean automatic) {
+        this.automatic = automatic;
+    }
+
     public void accelerate(int speed) {
         if (currentSpeed + speed > maximumSpeed) {
             System.out.println("The car has exceeded the limit speed");
@@ -138,5 +150,6 @@ public class Car {
                 + ", maximumSpeed=" + maximumSpeed + ", color=" + color + ", currentSpeed=" + currentSpeed + "]";
     }
 
+    
 
 }
