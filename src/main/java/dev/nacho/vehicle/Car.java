@@ -1,5 +1,8 @@
 package dev.nacho.vehicle;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Car {
     private String brand;
     private int model;
@@ -12,6 +15,7 @@ public class Car {
     private Color color;
     private int currentSpeed;
     private boolean automatic;
+    private List<Double> fines;
 
    
     public Car(String brand, int model, int engine, Fuel typeFuel, CarType carType, int doorsNumber, int seatsNumber,
@@ -27,6 +31,7 @@ public class Car {
         this.color = color;
         this.currentSpeed = currentSpeed;
         this.automatic = automatic;
+        this.fines = new ArrayList<>();
 
     }
 
@@ -121,6 +126,7 @@ public class Car {
     public void accelerate(int speed) {
         if (currentSpeed + speed > maximumSpeed) {
             System.out.println("The car has exceeded the limit speed");
+            fines.add(100.0);
             return;
         }
         this.currentSpeed = currentSpeed + speed;
@@ -136,6 +142,18 @@ public class Car {
 
     public void brake() {
         currentSpeed = 0;
+    }
+
+    public boolean hasFines() {
+        return !fines.isEmpty(); 
+    }
+
+    public double finesAmount() {
+        double add = 0;
+        for (double fine : fines) {
+            add = add + fine;
+        } 
+        return add;        
     }
 
     public int arrivalTime(int distance) {
