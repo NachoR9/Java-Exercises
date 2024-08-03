@@ -1,14 +1,17 @@
 # Exercise 1 Months and days
 
 Hacer un programa que, dado el número de un mes (1,2,3,4…12), presente el nombre del mes y determine la cantidad de días que tiene.
+<img src="./src/assets/diagrama Days and months.png"/>
 
 # Exercise 2 Amstrong
 
 Se quiere desarrollar un programa que determine si un número es un número de Amstrong. Un número de Amstrong es aquel que es igual a la suma de sus dígitos elevados a la potencia de su número de cifras.
+<img src="./src/assets/diagrama NumberAmstrong.png"/>
 
 # Exercise 3 Common Elements 
 
 Desarrollar un programa que busque elementos comunes en dos arrays de enteros.
+<img src="./src/assets/diagrama Common Elements.png"/>
 
 # Exercise 4 Vehicle
 
@@ -56,4 +59,4 @@ Modificar el método acelerar para que si la velocidad máxima se sobrepase se g
 
 Agregar un método para determinar si un vehículo tiene multas y otro método para determinar el valor total de multas de un vehículo.
 
-
+<img src="./src/assets/diagrama Car.png">
